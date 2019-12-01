@@ -4,18 +4,26 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 
+ * @author sandeep-krp Implement a stack API using only a heap. A stack
+ *         implements the following methods:
+ * 
+ *         push(item), which adds an element to the stack pop(), which removes
+ *         and returns the most recently added element (or throws an error if
+ *         there is nothing on the stack)
+ */
 public class DP154 {
 
 	FakeHeap heap = new FakeHeap();
 
 	public void push(Integer item) {
-		Integer top= heap.pop();
+		Integer top = heap.pop();
 		if (top == null) {
 			heap.push(item);
 			return;
 		}
 
-		
 		heap.push(top);
 		heap.push(top + item);
 
@@ -39,8 +47,6 @@ public class DP154 {
 	public String toString() {
 		return "DP154 [heap=" + heap + "]";
 	}
-	
-	
 
 }
 

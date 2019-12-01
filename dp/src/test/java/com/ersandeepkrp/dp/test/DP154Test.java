@@ -6,16 +6,7 @@ import org.junit.Test;
 
 import com.ersandeepkrp.dp.DP154;
 
-/**
- * 
- * @author sandeep-krp 
- * Implement a stack API using only a heap. A stack
- *         implements the following methods:
- * 
- *         push(item), which adds an element to the stack pop(), which removes
- *         and returns the most recently added element (or throws an error if
- *         there is nothing on the stack)
- */
+
 public class DP154Test {
 
 	private DP154 solution;

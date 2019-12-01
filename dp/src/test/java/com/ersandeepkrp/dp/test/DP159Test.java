@@ -28,4 +28,11 @@ public class DP159Test {
 		String ans = this.solution.findFirstReoccuringChar(input);
 		Assert.assertEquals(ans, "h");
 	}
+	
+	@Test
+	public void testNoReoccuringLetter() {
+		String input = "asdfghjkl";
+		String ans = this.solution.findFirstReoccuringChar(input);
+		Assert.assertNull(ans);;
+	}
 }

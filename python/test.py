@@ -1,5 +1,5 @@
 import unittest
-from problems import easy_712, easy_714, easy_825, easy_832
+from problems import easy_712, easy_714, easy_821, easy_825, easy_832
 from commonss import linked_list as ll
 class TestCorrectness(unittest.TestCase):
 
@@ -52,6 +52,11 @@ class TestCorrectness(unittest.TestCase):
         solved_arr = easy_825.solve_easy_825([-10, -9, -7, -2, 0, 2, 3])
         self.assertTrue(actual_ans == solved_arr)
 
+    def test_easy_821_1(self):
+        self.assertTrue(easy_821.solve_easy_821([-6, 0, 2, 40]),2)
+
+    def test_easy_821_2(self):
+        self.assertFalse(easy_821.solve_easy_821([1, 5, 7, 8]))
 
 def get_concatinated_list(head):
         temp = head

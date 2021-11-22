@@ -1,6 +1,7 @@
 import unittest
 from problems import easy_712, easy_714, easy_818, easy_819, easy_821, easy_825, easy_832
 from commonss import linked_list as ll
+from data import data_1
 class TestCorrectness(unittest.TestCase):
 
     def test_easy_712_1(self):
@@ -61,11 +62,14 @@ class TestCorrectness(unittest.TestCase):
     def test_easy_819_1(self):
         self.assertTrue(easy_819.solve_819([9, 11, 8, 1, 7, 11]) == 10)
 
-    def test_easy_819_1(self):
+    def test_easy_819_2(self):
         self.assertTrue(easy_819.solve_819([11, 2, 10, 1, 10, 1]) == 9)
 
-    def test_easy_819_1(self):
+    def test_easy_819_3(self):
         self.assertTrue(easy_819.solve_819([11, 10, 9, 8, 7, 6]) == 0)
+
+    def test_easy_819_4(self):
+        self.assertTrue(easy_819.solve_819(data_1.data) == 3)
 
     def test_818_1(self):
         self.assertTrue(easy_818.solve_818(10) == [2, 3, 5, 7])

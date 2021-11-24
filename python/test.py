@@ -1,5 +1,8 @@
 import unittest
-from problems import easy_712, easy_714, easy_818, easy_819, easy_821, easy_825, easy_832,leet_zigzag_conversion, leet_longest_substring_without_repeating_characters
+from problems import (easy_712, easy_714, easy_818, easy_819,
+                        easy_821, easy_825, easy_832,leet_zigzag_conversion,
+                        leet_longest_substring_without_repeating_characters,
+                        leet_reverse_integer)
 from commonss import linked_list as ll
 from data import data_1
 class TestCorrectness(unittest.TestCase):
@@ -94,6 +97,12 @@ class TestCorrectness(unittest.TestCase):
 
     def leet_longest_substring_without_repeating_characters_3(self):
         self.assertTrue(leet_longest_substring_without_repeating_characters('') == 0)
+
+    def leet_reverse_integer_1(self):
+        self.assertTrue(leet_reverse_integer.solve_leet_reverse_integer(123) == 321)
+
+    def leet_reverse_integer_2(self):
+        self.assertTrue(leet_reverse_integer.solve_leet_reverse_integer(1534236469) == 0)
 
 def get_concatinated_list(head):
         temp = head

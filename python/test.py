@@ -1,5 +1,5 @@
 import unittest
-from problems import easy_712, easy_714, easy_818, easy_819, easy_821, easy_825, easy_832
+from problems import easy_712, easy_714, easy_818, easy_819, easy_821, easy_825, easy_832,leet_zigzag_conversion
 from commonss import linked_list as ll
 from data import data_1
 class TestCorrectness(unittest.TestCase):
@@ -76,6 +76,13 @@ class TestCorrectness(unittest.TestCase):
 
     def test_818_1(self):
         self.assertTrue(easy_818.solve_818(25) == [2, 3, 5, 7, 11, 13, 17, 19, 23])
+
+    def test_leet_zigzag_conversion_1(self):
+        self.assertTrue(leet_zigzag_conversion.solve_leet_zigzag_conversion('PAYPALISHIRING',3)=='PAHNAPLSIIGYIR')
+
+    def test_leet_zigzag_conversion_2(self):
+        self.assertTrue(leet_zigzag_conversion.solve_leet_zigzag_conversion('PAYPALISHIRING',4)=='PINALSIGYAHRPI')
+
 
 
 def get_concatinated_list(head):

@@ -17,21 +17,34 @@
 def solve_leet_zigzag_conversion(s,numRows):
     return solve(s,numRows)
 
-def solve(s,numRows):
-    r = get_no_of_row(s,numRows)
+def solve(inputString,numRows):
+    if numRows == 1:
+        return inputString
+    m = {}
+    i = j = 0
+    climbing = False
+    for c in inputString:
+        m[str(i)+','+str(j)] = c
+        if not climbing:
+            if j == numRows -1 :
+                climbing = True
+                i = i+1
+                j -= 1
+            else:
+                j += 1
+        else:
+            if j == 0:
+                climbing = False
+                j = j+1
+            else:
+                i += 1
+                j -= 1
 
-
-def get_no_of_row(s,numRows):
-    print('Lengh of input [{}]'.format(len(s)))
-    noOfMidCols = (numRows-2)
-    divider = numRows + noOfMidCols
-    div_out = len(s)/divider
-    rem = len(s)% divider
-    no_of_grid_cols = (div_out * (noOfMidCols+1))+ rem/numRows + (rem % numRows if rem >= numRows else (1 if rem > 0 else 0))
-    print('No of grid_columns [{}]'.format(no_of_grid_cols))
-# WIP FIXME
-solve('ABCDEFGHIJK',4)
-
-
-
-
+                # i does not change
+    out = ""
+    for y in range(numRows):
+        for x in range(i+1):
+            key = str(x)+','+str(y)
+            if key in m:
+                out = out + m[key]
+    return out

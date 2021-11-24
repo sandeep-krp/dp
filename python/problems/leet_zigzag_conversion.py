@@ -17,34 +17,20 @@
 def solve_leet_zigzag_conversion(s,numRows):
     return solve(s,numRows)
 
+# Faster than 80% of submissions
 def solve(inputString,numRows):
     if numRows == 1:
         return inputString
-    m = {}
-    i = j = 0
+    j = 0
     climbing = False
+    rows = [""] * numRows
+    inc = 1
     for c in inputString:
-        m[str(i)+','+str(j)] = c
-        if not climbing:
-            if j == numRows -1 :
-                climbing = True
-                i = i+1
-                j -= 1
-            else:
-                j += 1
-        else:
-            if j == 0:
-                climbing = False
-                j = j+1
-            else:
-                i += 1
-                j -= 1
-
-                # i does not change
+        rows[j] += c
+        j += inc
+        if j == 0 or j == numRows-1:
+            inc *= -1
     out = ""
-    for y in range(numRows):
-        for x in range(i+1):
-            key = str(x)+','+str(y)
-            if key in m:
-                out = out + m[key]
+    for k in range(numRows):
+        out += rows[k]
     return out

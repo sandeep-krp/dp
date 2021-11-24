@@ -1,5 +1,5 @@
 import unittest
-from problems import easy_712, easy_714, easy_818, easy_819, easy_821, easy_825, easy_832,leet_zigzag_conversion
+from problems import easy_712, easy_714, easy_818, easy_819, easy_821, easy_825, easy_832,leet_zigzag_conversion, leet_longest_substring_without_repeating_characters
 from commonss import linked_list as ll
 from data import data_1
 class TestCorrectness(unittest.TestCase):
@@ -83,7 +83,17 @@ class TestCorrectness(unittest.TestCase):
     def test_leet_zigzag_conversion_2(self):
         self.assertTrue(leet_zigzag_conversion.solve_leet_zigzag_conversion('PAYPALISHIRING',4)=='PINALSIGYAHRPI')
 
+    def test_leet_zigzag_conversion_3(self):
+        self.assertTrue(leet_zigzag_conversion.solve_leet_zigzag_conversion('AB',1)=='AB')
 
+    def leet_longest_substring_without_repeating_characters_1(self):
+        self.assertTrue(leet_longest_substring_without_repeating_characters('abcabcbb') == 3)
+
+    def leet_longest_substring_without_repeating_characters_2(self):
+        self.assertTrue(leet_longest_substring_without_repeating_characters('abb') == 2)
+
+    def leet_longest_substring_without_repeating_characters_3(self):
+        self.assertTrue(leet_longest_substring_without_repeating_characters('') == 0)
 
 def get_concatinated_list(head):
         temp = head

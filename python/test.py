@@ -2,7 +2,7 @@ import unittest
 from problems import (easy_712, easy_714, easy_818, easy_819,
                         easy_821, easy_825, easy_832,leet_zigzag_conversion,
                         leet_longest_substring_without_repeating_characters,
-                        leet_reverse_integer)
+                        leet_reverse_integer,leet_find_if_path_exists_in_graph)
 from commonss import linked_list as ll
 from data import data_1
 class TestCorrectness(unittest.TestCase):
@@ -103,6 +103,9 @@ class TestCorrectness(unittest.TestCase):
 
     def leet_reverse_integer_2(self):
         self.assertTrue(leet_reverse_integer.solve_leet_reverse_integer(1534236469) == 0)
+
+    def leet_find_if_path_exists_in_graph(self):
+        self.assertTrue(leet_find_if_path_exists_in_graph.solve_leet_find_if_path_exists_in_graph(n =10, edges=[[4,3],[1,4],[4,8],[1,7],[6,4],[4,2],[7,4],[4,0],[0,9],[5,4]], start=5, end=9) == True)
 
 def get_concatinated_list(head):
         temp = head
